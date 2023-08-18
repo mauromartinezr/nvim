@@ -49,6 +49,7 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     [",q"] = { "<cmd> q! <CR>", "Quit force " },
     [",w"] = { "<cmd> w <CR>", "Save file fast" },
+    [",ss"] = { "<cmd> :vertical split <CR>", "Vertical split" },
   },
 }
 
