@@ -148,6 +148,18 @@ local default_plugins = {
   -- load luasnips + cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",
+      opts = {
+        mapping = {
+      -- disable  tab
+      ["<Tab>"] = function(callback)
+        callback()
+      end,
+
+      ["<C-i>"] = function(callback)
+        callback()
+      end,
+     }
+    },
     event = "InsertEnter",
     dependencies = {
       {
@@ -281,5 +293,5 @@ end
 
 require("lazy").setup(default_plugins, config.lazy_nvim)
 
-require('plugins.configs.tabnine')
+-- require('plugins.configs.tabnine')
 require('plugins.configs.runner')
