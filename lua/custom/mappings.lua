@@ -23,22 +23,6 @@ vim.api.nvim_set_keymap(
   ":lua require'hop'.hint_char2()<CR>",
   {noremap = true, silent = true}
 )
-------------------------------- Aerial ---------------------------
--- You probably also want to set a keymap to toggle aerial
-vim.keymap.set(
-  'n',
-  '<leader>a',
-  '<cmd>Telescope aerial<CR>',
-  {noremap = true, silent = true}
-)
-
-vim.keymap.set(
-  'n',
-  '<leader>A',
-  '<cmd>AerialToggle!<CR>',
-  {noremap = true, silent = true}
-)
-
 -------------------------------- Local M -----------------------------
 local M = {}
 
