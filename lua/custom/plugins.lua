@@ -50,9 +50,9 @@ local plugins = {
   -- custom plugin 
   -- ###################
 
-  -- { 'codota/tabnine-nvim', build = "./dl_binaries.sh",
-  -- lazy = false
-  -- },
+  { 'codota/tabnine-nvim', build = "./dl_binaries.sh",
+  lazy = false
+  },
   {
     'andweeb/presence.nvim',
     init = function()
