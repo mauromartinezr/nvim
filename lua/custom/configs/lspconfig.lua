@@ -14,5 +14,5 @@ for _, lsp in ipairs(servers) do
 end
 
 -- 
--- lspconfig.pyright.setup {}
--- lspconfig.phpactor.setup{}
+lspconfig.pyright.setup {}
+lspconfig.phpactor.setup{}
