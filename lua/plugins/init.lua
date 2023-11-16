@@ -273,16 +273,6 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
-  {
-    'MarcHamamji/runner.nvim',
-    dependencies = {
-      'nvim-telescope/telescope.nvim',
-      dependencies = { 'nvim-lua/plenary.nvim' }
-    }, 
-    config = function()
-      require('runner').setup()
-    end
-  }
 }
 
 local config = require("core.utils").load_config()
@@ -294,4 +284,3 @@ end
 require("lazy").setup(default_plugins, config.lazy_nvim)
 
 --require('plugins.configs.tabnine')
-require('plugins.configs.runner')

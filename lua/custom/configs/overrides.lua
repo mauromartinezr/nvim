@@ -21,9 +21,9 @@ M.treesitter = {
   },
   indent = {
     enable = true,
-    -- disable = {
-    --   "python"
-    -- },
+    disable = {
+      "python"
+    },
   },
 }
 
@@ -54,29 +54,13 @@ M.mason = {
 
     -- rust
     "rust-analyzer",
-    "rustfmt",
 
     -- go
     "gopls",
-    "glint",
-    "go-debug-adapter",
-    "goimports",
-    "goimports-reviser",
-    "golangci-lint",
-    "golangci-lint-langserver",
-    "golines",
-    "gotests",
-    "gotestsum",
 
     -- python
     "pyright",
     "flake8",
-    "black",
-    "mypy",
-    "pydocstyle",
-    "pylint",
-    "pyre",
-    "autoflake",
     "autopep8",
     "python-lsp-server",
 
