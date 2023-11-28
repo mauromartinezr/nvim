@@ -273,7 +273,7 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
-  { 
+  {
     'codota/tabnine-nvim', build = "./dl_binaries.sh",
       lazy = false
   },
@@ -286,5 +286,6 @@ if #config.plugins > 0 then
 end
 
 require("lazy").setup(default_plugins, config.lazy_nvim)
+
 
 require('plugins.configs.tabnine')
