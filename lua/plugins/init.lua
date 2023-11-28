@@ -273,6 +273,10 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
+  { 
+    'codota/tabnine-nvim', build = "./dl_binaries.sh",
+      lazy = false
+  },
 }
 
 local config = require("core.utils").load_config()
