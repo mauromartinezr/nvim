@@ -9,6 +9,17 @@ vim.api.nvim_set_keymap(
   {noremap = true, silent = true}
 )
 
+------------------------------- Run Code ---------------------------
+function setup_go_mappings()
+    vim.api.nvim_buf_set_keymap(0, 'n', '<F2>', ':!go run %<CR>', { noremap = true, silent = true })
+end
+
+vim.cmd([[
+  augroup GoMappings
+    autocmd!
+    autocmd FileType go lua setup_go_mappings()
+  augroup END
+]])
 ------------------------------- Hop ---------------------------
 vim.api.nvim_set_keymap(
   'n',
@@ -27,20 +38,19 @@ vim.api.nvim_set_keymap(
 local M = {}
 
 --------------------------------- COPILOT ---------------------------------------
--- M.copilot = {
---   i = {
---     ["<C-x>"] = {
---       function()
---         vim.fn.feedkeys(vim.fn['copilot#Accept'](), '')
---       end,
---       "Copilot Accept",
---       {replace_keycodes = true, nowait=true, silent=true, expr=true, noremap=true}
---     }
---   }
--- }
+M.copilot = {
+  i = {
+    ["<C-x>"] = {
+      function()
+        vim.fn.feedkeys(vim.fn['copilot#Accept'](), '')
+      end,
+      "Copilot Accept",
+      {replace_keycodes = true, nowait=true, silent=true, expr=true, noremap=true}
+    }
+  }
+}
 
---------------------------------- COPILOT ---------------------------------------
-
+--------------------------------- GENERAL ---------------------------------------
 M.general = {
 
 
