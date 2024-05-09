@@ -1,6 +1,13 @@
 ---@type MappingsTable
 --
 --
+
+vim.api.nvim_set_keymap(
+  'n',
+  '<A-p>',
+  ":vsplit<CR>:lua vim.lsp.buf.definition()<CR>",
+  {noremap = true, silent = true}
+)
 ------------------------------- Telescope Projects ---------------------------
 vim.api.nvim_set_keymap(
   'n',
