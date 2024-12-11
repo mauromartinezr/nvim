@@ -69,6 +69,9 @@ M.general = {
     [",w"] = { "<cmd> w <CR>", "Save file fast" },
     [",ss"] = { "<cmd> :vertical split <CR>", "Vertical split" },
     [",sf"] = { "<cmd> :only <CR>", "Only window" },
+    ["<leader>sr"] = { "<cmd>lua require('spectre').open()<CR>", "Open Spectre" },
+    -- Buscar palabra bajo el cursor
+    ["<leader>sw"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Search word under cursor" },
   },
 }
 

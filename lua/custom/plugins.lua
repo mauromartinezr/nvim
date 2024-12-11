@@ -66,6 +66,12 @@ local plugins = {
       end,
   },
   {
+    "nvim-pack/nvim-spectre",
+    config = function()
+      require('spectre').setup()
+    end
+  },
+  {
     'stevearc/aerial.nvim',
     lazy = false,
     config = function()
