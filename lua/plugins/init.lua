@@ -274,9 +274,21 @@ local default_plugins = {
     end,
   },
   {
-    'codota/tabnine-nvim', build = "./dl_binaries.sh",
-      lazy = false
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+    },
+    build = "make tiktoken", -- Only on MacOS or Linux
+    opts = {
+      -- See Configuration section for options
+    },
+    -- See Commands section for default commands if you want to lazy load on them
   },
+  -- {
+  --   'codota/tabnine-nvim', build = "./dl_binaries.sh",
+  --     lazy = false
+  -- },
 }
 
 local config = require("core.utils").load_config()
@@ -288,4 +300,12 @@ end
 require("lazy").setup(default_plugins, config.lazy_nvim)
 
 
-require('plugins.configs.tabnine')
+-- require('plugins.configs.tabnine')
+-- require('plugins.configs.copilotchat')
+-- require("CopilotChat").setup {
+  -- See Configuration section for options
+-- }
+
+require("plugins.configs.avante")
+vim.cmd("AvanteSwitchProvider copilot")
+

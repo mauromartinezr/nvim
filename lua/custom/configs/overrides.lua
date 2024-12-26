@@ -17,6 +17,7 @@ M.treesitter = {
     "python",
     "go",
     "rust",
+    "php",
     "bash",
   },
   indent = {

@@ -55,6 +55,94 @@ M.general = {
       end,
       "LSP formatting",
     },
+
+
+    -- Copilot Chat
+    -- ["<leader>ah"] = {
+    --   function()
+    --     local actions = require "CopilotChat.actions"
+    --     require("CopilotChat.integrations.telescope").pick(actions.help_actions())
+    --   end,
+    --   "CopilotChat - Help actions",
+    -- },
+    -- Visual mode - Prompt
+    -- ["<leader>ak"] = {
+    --   function()
+    --     -- Obtener el texto seleccionado en el modo visual
+    --     local start_pos = vim.fn.getpos "'<"
+    --     local end_pos = vim.fn.getpos "'>"
+    --     local lines = vim.fn.getline(start_pos[2], end_pos[2])
+    --     local selected_text = table.concat(lines, "\n"):sub(start_pos[3], end_pos[3])
+    --
+    --     -- Pedir al usuario un prompt adicional
+    --     local input = vim.fn.input("Prompt Copilot: ", selected_text)
+    --     if input ~= "" then
+    --       -- Llamar a CopilotChat con el texto seleccionado y el prompt adicional
+    --       vim.cmd("CopilotChat " .. input)
+    --     end
+    --   end,
+    --   mode = "x", -- Modo visual
+    --   "CopilotChat - Visual mode prompt",
+    -- },
+
+    -- ["<leader>ap"] = {
+    --   function()
+    --     local actions = require "CopilotChat.actions"
+    --     require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
+    --   end,
+    --   "CopilotChat - Prompt actions",
+    -- },
+
+    -- ["<leader>ae"] = { "<cmd>CopilotChatExplain<cr>", "CopilotChat - Explain code" },
+    --
+    -- ["<leader>at"] = { "<cmd>CopilotChatTests<cr>", "CopilotChat - Generate tests" },
+    --
+    -- ["<leader>ar"] = { "<cmd>CopilotChatReview<cr>", "CopilotChat - Review code" },
+    --
+    -- ["<leader>aR"] = { "<cmd>CopilotChatRefactor<cr>", "CopilotChat - Refactor code" },
+    --
+    -- ["<leader>an"] = { "<cmd>CopilotChatBetterNamings<cr>", "CopilotChat - Better Naming" },
+    --
+    -- -- ["<leader>av"] = { ":CopilotChatVisual", mode = "x", "CopilotChat - Open in vertical split" },
+    --
+    -- ["<leader>ax"] = { ":CopilotChatInline<cr>", mode = "x", "CopilotChat - Inline chat" },
+
+    -- ["<leader>ai"] = {
+    --   function()
+    --     local input = vim.fn.input "Ask Copilot: "
+    --     if input ~= "" then
+    --       vim.cmd("CopilotChat " .. input)
+    --     end
+    --   end,
+    --   "CopilotChat - Ask input",
+    -- },
+
+    -- ["<leader>am"] = { "<cmd>CopilotChatCommit<cr>", "CopilotChat - Generate commit message for all changes" },
+    --
+    -- ["<leader>aM"] = {
+    --   "<cmd>CopilotChatCommitStaged<cr>",
+    --   "CopilotChat - Generate commit message for staged changes",
+    -- },
+
+    -- ["<leader>aq"] = {
+    --   function()
+    --     local input = vim.fn.input "Quick Chat: "
+    --     if input ~= "" then
+    --       vim.cmd("CopilotChatBuffer " .. input)
+    --     end
+    --   end,
+    --   "CopilotChat - Quick chat",
+    -- },
+
+    -- ["<leader>ad"] = { "<cmd>CopilotChatDebugInfo<cr>", "CopilotChat - Debug Info" },
+    --
+    -- ["<leader>af"] = { "<cmd>CopilotChatFixDiagnostic<cr>", "CopilotChat - Fix Diagnostic" },
+    --
+    -- ["<leader>al"] = { "<cmd>CopilotChatReset<cr>", "CopilotChat - Clear buffer and chat history" },
+    --
+    -- ["<leader>av"] = { "<cmd>CopilotChatToggle<cr>", "CopilotChat - Toggle" },
+    --
+    -- ["<leader>a?"] = { "<cmd>CopilotChatModels<cr>", "CopilotChat - Select Models" },
   },
 
   t = {
@@ -273,6 +361,7 @@ M.telescope = {
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
     ["<leader>gt"] = { "<cmd> Telescope git_status <CR>", "Git status" },
+    ["<leader>gb"] = { "<cmd> Git blame<CR>", "Git Blame" },
 
     -- pick a hidden term
     ["<leader>pt"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },
@@ -441,12 +530,12 @@ M.gitsigns = {
       "Preview hunk",
     },
 
-    ["<leader>gb"] = {
-      function()
-        package.loaded.gitsigns.blame_line()
-      end,
-      "Blame line",
-    },
+    -- ["<leader>gb"] = {
+    --   function()
+    --     package.loaded.gitsigns.blame_line()
+    --   end,
+    --   "Blame line",
+    -- },
 
     ["<leader>td"] = {
       function()

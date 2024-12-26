@@ -42,6 +42,13 @@ opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true
 
+-- fold 
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldenable = true
+opt.foldlevel = 99
+
+
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
 
